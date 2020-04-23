@@ -1325,8 +1325,7 @@ static int uv__fs_statx(int fd,
   int mode;
   int rc;
 
-  if (no_statx)
-    return UV_ENOSYS;
+  return UV_ENOSYS;
 
   dirfd = AT_FDCWD;
   flags = 0; /* AT_STATX_SYNC_AS_STAT */
